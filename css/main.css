@@ -82,6 +82,10 @@ form input {
     border: none;
     border-radius: 1.2rem;
 }
+.pointer
+{
+    cursor: pointer;
+}
 
 .modal .body {
     padding: 20px;
