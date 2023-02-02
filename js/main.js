@@ -1,4 +1,3 @@
-console.log("hello js :)");
 function createModal(config) {
   //create modal
   const modal = document.createElement("div");
@@ -32,9 +31,16 @@ function createModal(config) {
   modalContainer.appendChild(modalBody);
   modal.appendChild(modalContainer);
   document.body.appendChild(modal);
+  //remove modal with escape
+  document.addEventListener("keyup", (e) => {
+    if (e.key === "Escape") {
+      modal.remove();
+    }
+  });
 }
 
-createModal({
-  title: "welcome",
-  message: "hello from modal, this is a test for modal message",
-});
+document.getElementById("modal-1").onclick = () =>
+  createModal({
+    title: "welcome",
+    message: "hello from modal",
+  });
