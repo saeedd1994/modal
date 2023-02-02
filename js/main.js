@@ -7,6 +7,7 @@ function createModal(config) {
   const modalBg = document.createElement("div");
   modalBg.classList.add("background");
   modal.appendChild(modalBg);
+  modalBg.onclick = () => modal.remove();
   //create modal container
   const modalContainer = document.createElement("div");
   modalContainer.classList.add("modal-container");
@@ -31,7 +32,6 @@ function createModal(config) {
   modalContainer.appendChild(modalBody);
   modal.appendChild(modalContainer);
   document.body.appendChild(modal);
-  
 }
 
 createModal({
